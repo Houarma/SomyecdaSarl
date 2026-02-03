@@ -1,0 +1,145 @@
+/* Hero Custom Shapes - hero.css */
+
+.hero-container {
+  position: relative;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* Forme organique avec SVG clip-path - Mobile */
+.hero-image-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  clip-path: url(#hero-shape-mobile);
+}
+
+/* Coins arrondis en haut */
+.hero-image-wrapper {
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+}
+
+/* Forme ondulée en bas */
+.hero-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 180px;
+  background: white;
+  clip-path: ellipse(100% 100% at 50% 100%);
+  z-index: 1;
+}
+
+/* Tablet */
+@media (min-width: 640px) {
+  .hero-image-wrapper {
+    min-height: 550px;
+  }
+  
+  .hero-image-wrapper::after {
+    height: 200px;
+  }
+}
+
+/* Desktop Small */
+@media (min-width: 768px) {
+  .hero-image-wrapper {
+    min-height: 600px;
+    border-top-left-radius: 3rem;
+    border-top-right-radius: 3rem;
+  }
+  
+  .hero-image-wrapper::after {
+    height: 220px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .hero-image-wrapper {
+    min-height: 650px;
+    border-top-left-radius: 3.5rem;
+    border-top-right-radius: 3.5rem;
+  }
+  
+  .hero-image-wrapper::after {
+    height: 240px;
+  }
+}
+
+/* Desktop Large */
+@media (min-width: 1280px) {
+  .hero-image-wrapper {
+    min-height: 700px;
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+  }
+  
+  .hero-image-wrapper::after {
+    height: 260px;
+  }
+}
+
+/* Stats container avec courbes organiques */
+.stats-container {
+  position: relative;
+  z-index: 10;
+}
+
+.stats-container > div {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .stats-container > div {
+    border-top-left-radius: 4rem;
+    border-top-right-radius: 4rem;
+  }
+}
+
+/* Cercles décoratifs aux coins (optionnel) */
+.hero-corner-circle {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.hero-corner-circle.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.hero-corner-circle.top-right {
+  top: 20px;
+  right: 20px;
+}
+
+.hero-corner-circle.bottom-left {
+  bottom: 200px;
+  left: 20px;
+}
+
+.hero-corner-circle.bottom-right {
+  bottom: 200px;
+  right: 20px;
+}
+
+@media (min-width: 768px) {
+  .hero-corner-circle {
+    width: 40px;
+    height: 40px;
+  }
+}
