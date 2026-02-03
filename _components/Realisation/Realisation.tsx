@@ -108,7 +108,7 @@ export default function BlogCarousel({id}: {id?:string}) {
               </div>
               
               <h2 className="text-4xl font-bold leading-tight text-gray-900 md:text-4xl lg:text-[2.75rem] xl:text-5xl">
-                <span>Stay Ahead of the Winter With Our Expert Tips</span>
+                <span>Prenez une longueur d'avance  grâce à nos conseils d'experts</span>
               </h2>
             </div>
 
@@ -126,7 +126,7 @@ export default function BlogCarousel({id}: {id?:string}) {
               
               <button
                 onClick={() => scroll('right')}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-gray-900 shadow-lg transition-all hover:bg-gray-800 hover:shadow-xl active:scale-95"
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 shadow-lg transition-all hover:bg-emerald-700 hover:shadow-xl active:scale-95"
                 aria-label="Next blog post"
               >
                 <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

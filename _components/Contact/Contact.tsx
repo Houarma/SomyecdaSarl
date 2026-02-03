@@ -1,3 +1,4 @@
+import Link from "next/link";
 import TypewriterText from "../TypeWriterText/TypeWriterText"
 
 export default function Contact({ id }: { id?: string }) {
@@ -18,13 +19,13 @@ export default function Contact({ id }: { id?: string }) {
                   <svg className="h-6 w-6 flex-shrink-0 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-white/90">Experienced from more to 20 years</span>
+                  <span className="text-sm text-white/90">Plus de 20 ans d'expérience</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <svg className="h-6 w-6 flex-shrink-0 text-emerald-400" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
-                  <span className="text-sm text-white/90">Support for the latest technology</span>
+                  <span className="text-sm text-white/90">Prise en charge des dernières technologies</span>
                 </div>
               </div>
             </div>
@@ -35,8 +36,8 @@ export default function Contact({ id }: { id?: string }) {
                Chez SOMYECDA SARL, nous plaçons la satisfaction de nos clients au cœur de chaque projet. Avec rigueur et engagement, nous vous accompagnons pour transformer vos ambitions en résultats concrets et durables.
               </p>
               
-              <button className="flex items-center gap-2 rounded-full border-2 border-white bg-transparent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-white hover:text-gray-900">
-                Get started
+              <button  className="flex items-center gap-2 rounded-full border-2 border-white bg-transparent px-8 py-3 text-sm font-semibold text-white transition-all hover:bg-emerald-500 hover:text-gray-900">
+                <Link href="mailto:somyecda@contact.com">Contactez Nous</Link>
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

@@ -11,10 +11,10 @@ export default function Footer() {
             {/* Company Info */}
             <div className="lg:col-span-2">
               <div className="mb-6 flex items-center gap-2">
-                <div className="flex h-8 w-8 items-center justify-center">
+                <div className="flex  items-center justify-center">
                   <Logo/>
                 </div>
-                <span className="text-xl font-semibold text-white">Somyecda</span>
+                {/* <span className="text-xl font-semibold text-white">Somyecda</span> */}
                 
                
               </div>
@@ -35,11 +35,11 @@ export default function Footer() {
             <div>
               <h3 className="mb-6 text-sm font-bold text-white">Entreprise</h3>
               <ul className="space-y-3">
-                <li><Link href="#" className="text-sm text-gray-400 transition-colors hover:text-white">Acceuil</Link></li>
-                <li><Link href="#" className="text-sm text-gray-400 transition-colors hover:text-white">A propos</Link></li>
+                <li><Link href="#home" className="text-sm text-gray-400 transition-colors hover:text-white">Acceuil</Link></li>
+                <li><Link href="#about" className="text-sm text-gray-400 transition-colors hover:text-white">A propos</Link></li>
                 
-                <li><Link href="#" className="text-sm text-gray-400 transition-colors hover:text-white">Services</Link></li>
-                <li><Link href="#" className="text-sm text-gray-400 transition-colors hover:text-white">Contact</Link></li>
+                <li><Link href="#service" className="text-sm text-gray-400 transition-colors hover:text-white">Services</Link></li>
+                <li><Link href="#contact" className="text-sm text-gray-400 transition-colors hover:text-white">Contact</Link></li>
               </ul>
             </div>
 
@@ -65,7 +65,7 @@ export default function Footer() {
                   <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  <span>Snowly@gmail.com</span>
+                  <Link href="mailto:somyecda@contact.com" className=" hover:text-emerald-400">somyecda@contact.com</Link>
                 </li>
                 <li className="flex items-start gap-2">
                   <svg className="mt-0.5 h-5 w-5 flex-shrink-0 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -105,9 +105,15 @@ export default function Footer() {
           </div>
           <div className="my-10">
             <hr className="border-white/20"/>
+            <div className="flex justify-between">
+
              <p className=" text-sm text-gray-400">
                 © {new Date().getFullYear()} Somyecda Sarl. Tous droits réservés.
               </p>
+              <p className=" text-sm text-gray-400">
+                Réalisé par <Link href="https://www.linkedin.com/in/haphiz-ouarma-882670301" className="text-shadow-gray-50 hover:text-emerald-400">Haphiz-Ouarma 👨‍💻</Link>
+              </p>
+            </div>
         </div>
         </div>
         

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ButtonText from "./ButtonText/ButtonText";
+import Link from "next/link";
 
 export default function Home() {
   
@@ -25,8 +26,8 @@ export default function Home() {
                 Que vous ayez besoin d'une maintenance industrielle  rigoureuse, d'une expertise automobile pointue ou la réalisation d'un audit énergétique , d'un traitements en eaux usées , d'un expertise en groupes electrogenes  et des besoins en agro industrie, vous pouvez compter sur nous.
                 Notre équipe expérimentée et compétente  ayant les connaissances et l'expérience nécessaires pour prendre en charge tous vos besoins.</p>
               
-              <button className="mb-8 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl">
-                En savoir plus
+              <button className="mb-8 rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
+                <Link href="#contact">En savoir plus</Link>
               </button>
 
               <div className="border-t border-gray-200 pt-6">

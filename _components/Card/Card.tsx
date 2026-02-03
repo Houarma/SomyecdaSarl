@@ -34,7 +34,7 @@ export function Card({
         </h5>
       </Link>
 
-      <span className="inline-flex items-center mb-4 bg-blue-100 border border-blue-200 text-blue-800 text-xs font-medium px-1.5 py-0.5 rounded">
+      <span className="inline-flex items-center mb-4 bg-emerald-100 border border-emerald-200 text-emerald-800 text-xs font-medium px-1.5 py-0.5 rounded">
         <svg
           className="w-3 h-3 me-1"
           aria-hidden="true"
@@ -59,9 +59,9 @@ export function Card({
 
       <Link
         href="#"
-        className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-200 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200"
+        className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm hover:bg-emerald-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200"
       >
-        Read more
+        En Savoir Plus
         <svg
           className="w-4 h-4 ms-1.5 rtl:rotate-180"
           aria-hidden="true"

@@ -48,7 +48,7 @@ export default function Hero() {
                   {/* Boutons CTA */}
                   <div className="flex flex-wrap items-center gap-6 lg:gap-8">
                     <Link
-                      href="/contact"
+                      href="#contact"
                       className="group inline-flex items-center gap-2 border-b-2 border-white pb-1 text-sm font-semibold text-white transition-all hover:border-green-400 hover:text-green-400 sm:text-base"
                     >
                       Contact
@@ -68,7 +68,7 @@ export default function Hero() {
                     </Link>
 
                     <Link
-                      href="/services"
+                      href="#service"
                       className="group inline-flex items-center gap-2 border-b-2 border-white pb-1 text-sm font-semibold text-white transition-all hover:border-green-400 hover:text-green-400 sm:text-base"
                     >
                       Services
@@ -107,6 +107,7 @@ export default function Hero() {
                       className="absolute right-7 top-7 flex h-11 w-11 items-center justify-center rounded-full bg-white/95 shadow-lg backdrop-blur-sm transition-all duration-300 hover:scale-110 hover:bg-white xl:h-12 xl:w-12"
                       aria-label="Voir la vidéo"
                     >
+                      <Link href="#about">
                       <svg
                         className="ml-0.5 h-4 w-4 text-gray-800 xl:h-5 xl:w-5"
                         fill="currentColor"
@@ -114,6 +115,8 @@ export default function Hero() {
                       >
                         <path d="M8 5v14l11-7z" />
                       </svg>
+                      </Link>
+                      
                     </button>
 
                     {/* Texte */}

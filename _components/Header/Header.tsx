@@ -37,9 +37,9 @@ export default function Header({ id }: { id?: string }) {
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className=" h-10 w-10 items-center justify-center  ">
+            <div className="  items-center justify-center  ">
                {/* Logo */}
-                <Link href="/" className=" items-center">
+                <Link href="#home" className=" items-center">
                   <Logo/>
                 </Link>
             </div>
@@ -62,7 +62,7 @@ export default function Header({ id }: { id?: string }) {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-             <Link href="#" className="rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
+             <Link href="mailto:somyecda@contact.com" className="rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
             Message
           </Link>
           </div>
@@ -119,7 +119,7 @@ export default function Header({ id }: { id?: string }) {
             ))}
             <div className="pt-4">
               <Link
-                href="/contact"
+                href="#contact"
                 onClick={() => setIsMenuOpen(false)}
                 className="block w-full rounded-full bg-green-500 px-6 py-3 text-center text-sm font-semibold text-white transition-all hover:bg-green-600"
               >
