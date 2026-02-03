@@ -1,6 +1,7 @@
 "use client";
-import { ElementType } from "react";
+
 import { motion } from "framer-motion";
+import { ElementType, createElement } from "react";
 
 interface TypewriterTextProps {
   text: string;
@@ -17,50 +18,39 @@ export default function TypewriterText({
 }: TypewriterTextProps) {
   const letters = Array.from(text);
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: speed,
-      },
-    },
-  };
-
-  const child = {
-    hidden: {
-      opacity: 0,
-      y: "0.25em",
-    },
-    visible: {
-      opacity: 1,
-      y: "0em",
-      transition: {
-        ease: "easeOut",
-      },
-    },
-  };
-
-  const Component = motion[as as keyof typeof motion] || motion.p;
-
-  return (
-    <Component
-      className={className}
-      variants={container}
+  return createElement(
+    as,
+    { className, "aria-label": text },
+    <motion.span
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
-      aria-label={text}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: {
+            staggerChildren: speed,
+          },
+        },
+      }}
+      className="inline-block"
     >
       {letters.map((char, index) => (
         <motion.span
           key={index}
-          variants={child}
-          style={{ display: "inline-block", whiteSpace: "pre" }}
+          variants={{
+            hidden: { opacity: 0, y: "0.25em" },
+            visible: {
+              opacity: 1,
+              y: "0em",
+              transition: { ease: "easeOut" },
+            },
+          }}
+          className="inline-block whitespace-pre"
         >
           {char}
         </motion.span>
       ))}
-    </Component>
+    </motion.span>
   );
 }
