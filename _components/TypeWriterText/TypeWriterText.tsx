@@ -1,10 +1,10 @@
 "use client";
-
+import { ElementType } from "react";
 import { motion } from "framer-motion";
 
 interface TypewriterTextProps {
   text: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: ElementType;
   speed?: number;
   className?: string;
 }
