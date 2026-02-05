@@ -1,5 +1,5 @@
 "use client";
-
+import { toast, ToastContainer } from 'react-toastify';
 import Header from "@/_components/Header/Header";
 import Hero from "@/_components/Hero/Hero";
 import Service from "@/_components/Services/Services";
@@ -9,8 +9,12 @@ import Contact from "@/_components/Contact/Contact";
 import Realisation from "@/_components/Realisation/Realisation";
 import { motion } from "framer-motion";
 import ScrollReveal from "@/_components/ScrollReveal/ScrollReveal";
+import { useEffect } from 'react';
 
 export default function Home() {
+  useEffect(() => {
+    toast('Bienvenue sur le site de SOMYECDA SARL !');
+  }, []);
   return (
     <>
       <Header id="home"/>
@@ -20,6 +24,7 @@ export default function Home() {
       <ScrollReveal delay={0.4}><Realisation id="about"/></ScrollReveal>
       <ScrollReveal delay={0.5}><Contact id="contact"/></ScrollReveal>
       <ScrollReveal delay={0.6}><Footer /></ScrollReveal>
+      <ToastContainer theme="light" position="bottom-right" />
     </>
   );
 }
