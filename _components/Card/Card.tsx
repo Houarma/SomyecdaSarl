@@ -4,19 +4,27 @@
 import Image from "next/image";
 import Link from "next/link";
 import MotionWrapper from "../MotionWrapper/Motion";
+import { useState } from "react";
 export function Card({
   image,
   title,
   date,
   category,
   description,
+  details,
 }: {
   image: string;
   title: string;
   date: string;
   category: string;
   description: string;
+  details?: string;
 }) {
+    const [showDetails, setShowDetails] =useState(false);
+     const toggleDetails = (e: React.MouseEvent) => {
+    setShowDetails((prev) => !prev);
+    e.stopPropagation();
+  };
   return (
     
     <div className=" flex-shrink-0 overflow-hidden block  p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all hover:shadow-xl max-w-sm">
@@ -56,12 +64,21 @@ export function Card({
       <p className="mb-6 text-gray-700">
         {description}
       </p>
-
-      <Link
-        href="#"
+       {showDetails && (
+				<div
+                    className="my-4 p-4 bg-gray-100 rounded-lg text-sm text-gray-800"
+					style={{
+						whiteSpace: 'pre-line',
+					}}
+				>
+					{details}
+				</div>
+			)}
+      <div
+        onClick={(event)=>toggleDetails(event)}
         className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm hover:bg-emerald-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200"
       >
-        En Savoir Plus
+       {showDetails ? "Cacher les détails" : "En Savoir Plus"}
         <svg
           className="w-4 h-4 ms-1.5 rtl:rotate-180"
           aria-hidden="true"
@@ -77,7 +94,7 @@ export function Card({
             d="M19 12H5m14 0-4 4m4-4-4-4"
           />
         </svg>
-      </Link>
+      </div>
     </div>
   );
 }
