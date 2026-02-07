@@ -27,16 +27,20 @@ export function Card({
   };
   return (
     
-    <div className=" flex-shrink-0 overflow-hidden block  p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all hover:shadow-xl max-w-sm">
-      <Link href="#">
+    <div className=" flex-shrink-0 overflow-hidden block h-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all hover:shadow-xl max-w-sm">
+      <div className="h-50 w-auto relative">
+
+      
         <Image
-          className="rounded-lg"
+          className="rounded-lg object-cover"
           src={image}
           alt={title}
-          width={400}
-          height={250}
+          fill
+        //   height={200}
+        //   width={400}
         />
-      </Link>
+      
+      </div>
 
       <Link href="#">
         <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-gray-900">
