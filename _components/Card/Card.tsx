@@ -29,10 +29,12 @@ export function Card({
     
     <div className=" flex-shrink-0 overflow-hidden block  p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all hover:shadow-xl max-w-sm">
       <Link href="#">
-        <img
+        <Image
           className="rounded-lg"
           src={image}
           alt={title}
+          width={400}
+          height={250}
         />
       </Link>
 
