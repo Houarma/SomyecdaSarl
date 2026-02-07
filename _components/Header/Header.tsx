@@ -34,43 +34,19 @@ export default function Header({ id }: { id?: string }) {
                     opacity: hidden ? 0 : 1,
                 }}
                 transition={{ duration: 0.3, ease: "easeInOut" }} id={id} className=" fixed left-0 right-0 top-0 z-50 bg-white/80 backdrop-blur-md">
-        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+        <nav className="mx-auto flex-col md:flex-row flex max-w-7xl md:items-center justify-between px-6 py-4 lg:px-8">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <div className="flex justify-between items-center gap-2">
             <div className="  items-center justify-center  ">
                {/* Logo */}
                 <Link href="#home" className=" items-center">
                   <Logo/>
                 </Link>
             </div>
-            
-          </div>
-
-          {/* Navigation Links */}
-          <div className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-sm font-medium text-gray-700 transition-colors hover:text-green-600"
-            >
-              {link.label}
-            </Link>
-          ))}
-            
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:block">
-             <Link href="mailto:somyecda@contact.com" className="rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
-            Message
-          </Link>
-          </div>
-         
-          {/* Bouton Menu Mobile */}
+              {/* Bouton Menu Mobile */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 md:hidden"
+          className=" h-10 w-10 items-center justify-center rounded-lg text-gray-700 transition-colors hover:bg-gray-100 md:hidden"
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
@@ -103,10 +79,36 @@ export default function Header({ id }: { id?: string }) {
             </svg>
           )}
         </button>
+          </div>
+
+          {/* Navigation Links */}
+          <div className="hidden items-center gap-8 md:flex">
+            {navLinks.map((link) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-gray-700 transition-colors hover:text-green-600"
+            >
+              {link.label}
+            </Link>
+          ))}
+            
+          </div>
+
+          {/* CTA Button */}
+          <div className="hidden md:block">
+             <Link href="mailto:somyecda@contact.com" className="rounded-full bg-gradient-to-r from-emerald-400 to-emerald-500 px-6 py-2.5 text-sm font-semibold text-white shadow-lg transition-all hover:shadow-xl hover:scale-105">
+            Message
+          </Link>
+          </div>
+         
+        
         {/* Menu Mobile */}
       {isMenuOpen && (
-        <div className="border-t border-gray-200 bg-white md:hidden">
+        <div className="md:hidden">
           <div className="space-y-1 px-6 pb-6 pt-4">
+            <div className="flex flex-col items-center gap-4">
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -117,6 +119,7 @@ export default function Header({ id }: { id?: string }) {
                 {link.label}
               </Link>
             ))}
+            </div>
             <div className="pt-4">
               <Link
                 href="#contact"
