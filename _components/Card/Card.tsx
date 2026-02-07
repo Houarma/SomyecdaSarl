@@ -36,8 +36,7 @@ export function Card({
           src={image}
           alt={title}
           fill
-        //   height={200}
-        //   width={400}
+          quality={100}
         />
       
       </div>
