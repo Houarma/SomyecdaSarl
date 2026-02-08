@@ -158,7 +158,7 @@ export default function BlogCarousel({id}: {id?:string}) {
             <div className="mt-8 flex items-center gap-4 lg:mt-0">
               <button
                 onClick={() => scroll('left')}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition-all hover:bg-gray-50 hover:shadow-xl active:scale-95"
+                className="flex h-14 w-14 items-center justify-center rounded-full bg-white shadow-lg transition-all  active:bg-emerald-700 hover:shadow-xl"
                 aria-label="Previous blog post"
               >
                 <svg className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -168,10 +168,10 @@ export default function BlogCarousel({id}: {id?:string}) {
               
               <button
                 onClick={() => scroll('right')}
-                className="flex h-14 w-14 items-center justify-center rounded-full bg-emerald-600 shadow-lg transition-all hover:bg-emerald-700 hover:shadow-xl active:scale-95"
+                className="flex h-14 w-14 items-center justify-center rounded-full transition-all bg-white shadow-lg  active:bg-emerald-700 hover:shadow-xl "
                 aria-label="Next blog post"
               >
-                <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-6 w-6 text-gray-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </button>
