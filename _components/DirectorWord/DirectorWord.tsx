@@ -1,7 +1,7 @@
 import Image from "next/image";
 import ButtonText from "./ButtonText/ButtonText";
 import Link from "next/link";
-
+import { motion } from "motion/react";
 export default function Home() {
   
   const services = ["Maintenance automobile","Maintenance industrielle","Audit Energetique","Traitement eaux usées"];
@@ -38,7 +38,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Image */}
-            <div className="order-1 lg:order-2">
+            {/* <div className="order-1 lg:order-2">
               <div className="relative h-[500px] overflow-hidden rounded-3xl bg-white shadow-xl">
                 <Image
                   src="/pdg.jpg"
@@ -47,6 +47,45 @@ export default function Home() {
                   className=" object-cover object-top"
                 />
               </div>
+            </div> */}
+            <div className="order-1 lg:order-2">
+
+                <motion.div 
+                className="group relative h-[500px] bg-white overflow-hidden rounded-3xl"
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+                >
+                {/* Image */}
+                <Image
+                    src="/pdg.jpg"
+                    alt="Description"
+                    fill
+                    quality={100}
+                    className="object-cover object-top transition-transform duration-500 group-hover:scale-110"
+                />
+                
+                {/* Glass sweep à l'apparition */}
+                <motion.div
+                    className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent backdrop-blur-md"
+                    initial={{ x: '-100%' }}
+                    whileInView={{ x: '100%' }}
+                    viewport={{ once: true }}
+                    transition={{
+                    duration: 1.2,
+                    delay: 0.3,
+                    ease: [0.25, 0.46, 0.45, 0.94],
+                    }}
+                />
+                
+                {/* Glass effect au hover */}
+                <motion.div
+                    className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/20 to-white/0 opacity-0 backdrop-blur-sm"
+                    whileHover={{ opacity: 1 }}
+                    transition={{ duration: 0.3 }}
+                />
+                </motion.div>
             </div>
           </div>
 
