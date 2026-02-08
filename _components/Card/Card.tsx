@@ -3,7 +3,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import MotionWrapper from "../MotionWrapper/Motion";
+import { motion } from "framer-motion";
 import { useState } from "react";
 export function Card({
   image,
@@ -28,18 +28,42 @@ export function Card({
   return (
     
     <div className=" flex-shrink-0 overflow-hidden block h-full p-6 bg-white border border-gray-200 rounded-lg shadow-sm transition-all hover:shadow-xl max-w-sm">
-      <div className="h-50 w-auto relative">
-
       
-        <Image
-          className="rounded-lg object-cover"
-          src={image}
-          alt={title}
-          fill
-          quality={100}
-        />
+      <div className="relative h-50 w-auto overflow-hidden rounded-lg">
+      {/* Image */}
+      <Image
+        src={image}
+        alt={title}
+        fill
+        quality={100}
+        className="object-cover"
+      />
       
-      </div>
+      {/* Première vague */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-emerald-500/30 to-transparent backdrop-blur-md"
+        initial={{ x: '-100%' }}
+        whileInView={{ x: '100%' }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      />
+      
+      {/* Deuxième vague (retardée) */}
+      <motion.div
+        className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent backdrop-blur-sm"
+        initial={{ x: '-100%' }}
+        whileInView={{ x: '100%' }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1.2,
+          delay: 0.3,
+          ease: 'easeInOut',
+        }}
+      />
+    </div>
 
       <Link href="#">
         <h5 className="mt-6 mb-2 text-2xl font-semibold tracking-tight text-gray-900">
