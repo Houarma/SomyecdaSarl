@@ -105,7 +105,7 @@ export function Card({
 			)}
       <div
         onClick={(event)=>toggleDetails(event)}
-        className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm hover:bg-emerald-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200"
+        className="inline-flex items-center px-4 py-2.5 text-sm font-medium text-gray-700 bg-gray-100 border border-gray-300 rounded-lg shadow-sm active:bg-emerald-500 hover:text-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-200"
       >
        {showDetails ? "Cacher les détails" : "En Savoir Plus"}
         <svg

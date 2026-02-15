@@ -78,7 +78,7 @@ export default function Footer() {
 
             {/* Social Links */}
             <div>
-              <h3 className="mb-6 text-sm font-bold text-white">Follow Us</h3>
+              <h3 className="mb-6 text-sm font-bold text-white">Contactez-Nous</h3>
               <div className="flex gap-4">
                 <a href="#" className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20">
                   <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
